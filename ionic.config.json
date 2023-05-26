@@ -1,0 +1,7 @@
+{
+  "name": "CafeteriaF",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
