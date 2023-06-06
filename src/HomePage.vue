@@ -8,17 +8,23 @@ import App from './App.vue'
 		</ion-header>
 
 		<ion-content :fullscreen="true">
+		    <ion-item >   
+		<div align="center">
+				<img src="../src/cafe-americano.png" width="300" height="300">
+				</div>
+				</ion-item>
 			<form @submit.prevent="onSubmit">
 				<ion-item>
-					<ion-label position="floating">User name</ion-label>
+					<ion-label position="floating">Usuario</ion-label>
 					<ion-input type="text" required v-model="user" />
 				</ion-item>
+				
 				<ion-item>
-					<ion-label position="floating">Password</ion-label>
+					<ion-label position="floating">Contraceña</ion-label>
 					<ion-input type="password" required v-model="password" />
 				</ion-item>
 				
-				<ion-button type="submit" expand="block">login</ion-button>
+				<ion-button type="submit" expand="block">Ingresar</ion-button>
 			</form>
 		</ion-content>
 	</ion-page>
