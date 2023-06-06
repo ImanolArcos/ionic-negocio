@@ -66,13 +66,13 @@ import {
 const selectedIndex = ref(0);
 const appPages = [
   {
-    title: 'Inbox',
+    title: 'Holaaa',
     url: '/folder/Inbox',
     iosIcon: mailOutline,
     mdIcon: mailSharp,
   },
   {
-    title: 'Outbox',
+    title: 'Elias',
     url: '/folder/Outbox',
     iosIcon: paperPlaneOutline,
     mdIcon: paperPlaneSharp,
@@ -97,12 +97,12 @@ const appPages = [
   },
   {
     title: 'Spam',
-    url: '/folder/Spam',
+    url: 'www.google.com',
     iosIcon: warningOutline,
     mdIcon: warningSharp,
   },
 ];
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+const labels = ['Prueba1', 'Prueba 2', 'Notes', 'Work', 'Travel', 'Reminders'];
 
 const path = window.location.pathname.split('folder/')[1];
 if (path !== undefined) {
@@ -112,7 +112,7 @@ if (path !== undefined) {
 
 <style scoped>
 ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: var(--ion-item-background, var(--ion-background-color, #39ED19));
 }
 
 ion-menu.md ion-content {
@@ -151,7 +151,7 @@ ion-menu.md ion-list#labels-list ion-list-header {
 
   margin-bottom: 18px;
 
-  color: #757575;
+  color: #E33185;
 
   min-height: 26px;
 }
