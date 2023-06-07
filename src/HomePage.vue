@@ -75,11 +75,12 @@ const onSubmit = async () => {
 		});
 
 		await alert.present();
+		this.router.push("/Principal")
 
  //<ion-button router-link="/Principal">Go to detail</ion-button>
 
     
- //this.router.navigate("/Principal")
+ //this.router.push("/Principal")
       
 	} else alert('datos incorrectos');
 };
