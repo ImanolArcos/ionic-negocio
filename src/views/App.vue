@@ -127,7 +127,7 @@ const appPages = [
     mdIcon: camera,
   }
 ];
-const labels = [ 'Elias', 'El Cochazo', 'Imanol'];
+const labels = [ 'Elias', 'Merino', 'Imanol'];
 
 const path = window.location.pathname.split('folder/')[1];
 if (path !== undefined) {
@@ -137,7 +137,7 @@ if (path !== undefined) {
 
 <style scoped>
 ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #39ED19));
+  --background: var(--ion-item-background, var(--ion-background-color, #0b2507));
 }
 
 ion-menu.md ion-content {
