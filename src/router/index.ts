@@ -10,10 +10,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Login',
     component: Home
   },
-  {
-    path: '/folder/:id',
-    component: () => import ('../views/FolderPage.vue')
-  },
+ 
   {
     path: '/menu',
     name: 'Menu',

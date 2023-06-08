@@ -79,6 +79,9 @@
 
 
 <script lang="ts" setup>
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+
 import {
 	IonContent,
 	IonHeader,
@@ -92,6 +95,7 @@ import {
 	alertController,
 } from '@ionic/vue';
 import { defineComponent, ref } from 'vue';
+
 
 defineComponent({
 	name: 'HomePage',
@@ -113,7 +117,21 @@ defineComponent({
 
 function iniciarSesionConGoogle() {
 
-}
+	var provider = new firebase.auth.GoogleAuthProvider();
+	firebase.auth().signInWithPopup(provider)
+    .then(function(result) {
+      var user = result.user;
+      console.log("Usuario inició sesión:", user);
+	  
+	 // window.location.href='http://localhost:8100/folder/Inbox';
+	// this.$router.push('/menu');
+	 //this.window.close();
+    })
+    .catch(function(error) {
+      console.log("Error al iniciar sesión:", error);
+    });
+    }
+
 </script>
 
 
