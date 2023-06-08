@@ -4,8 +4,26 @@
       <ion-menu content-id="main-content" type="overlay">
         <ion-content>
           <ion-list id="inbox-list">
-            <ion-list-header>Inbox</ion-list-header>
-            <ion-note>hi@ionicframework.com</ion-note>
+            <div class="Nombre">
+				
+				<ion-item >
+					<ion-title class="ion-text-center">Cafeteria Cafe en la Nuve</ion-title>
+         
+					</ion-item>
+
+        
+
+				</div>
+           
+        <div class="diseñoimg">
+				
+		    <ion-item >
+				<img class="centrar-imagen" src="../cafe-americano.png" width="100" height="100" alt="Imagen Cafe">
+			
+				</ion-item>
+			</div>
+          
+            
 
             <ion-menu-toggle :auto-hide="false" v-for="(p, i) in appPages" :key="i">
               <ion-item @click="selectedIndex = i" router-direction="root" :router-link="p.url" lines="none" :detail="false" class="hydrated" :class="{ selected: selectedIndex === i }">
@@ -16,7 +34,7 @@
           </ion-list>
 
           <ion-list id="labels-list">
-            <ion-list-header>Labels</ion-list-header>
+            <ion-list-header>Equipo truchas</ion-list-header>
 
             <ion-item v-for="(label, index) in labels" lines="none" :key="index">
               <ion-icon aria-hidden="true" slot="start" :ios="bookmarkOutline" :md="bookmarkSharp"></ion-icon>
@@ -29,7 +47,17 @@
     </ion-split-pane>
   </ion-app>
 </template>
+<style>
 
+
+.diseñoimg{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 18vh;
+
+}
+</style>
 <script setup lang="ts">
 import {
   IonApp,
@@ -51,58 +79,55 @@ import {
   archiveSharp,
   bookmarkOutline,
   bookmarkSharp,
+  camera,
+  document,
+  documentAttach,
+  documentAttachOutline,
+  documentLock,
   heartOutline,
   heartSharp,
+  information,
+  magnet,
+  magnetOutline,
+  magnetSharp,
   mailOutline,
   mailSharp,
+  micCircle,
+  micCircleOutline,
   paperPlaneOutline,
   paperPlaneSharp,
+  recording,
   trashOutline,
   trashSharp,
   warningOutline,
   warningSharp,
 } from 'ionicons/icons';
+import { receiveMessageOnPort } from 'worker_threads';
+import { RouterView, routerViewLocationKey } from 'vue-router';
+import { verify } from 'crypto';
 
 const selectedIndex = ref(0);
 const appPages = [
   {
-    title: 'Holaaa',
+    title: 'Infomacion',
     url: '/folder/Inbox',
     iosIcon: mailOutline,
-    mdIcon: mailSharp,
+    mdIcon: information,
   },
   {
-    title: 'Elias',
+    title: 'Consultar Registros',
     url: '/folder/Outbox',
     iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp,
+    mdIcon: document,
   },
   {
-    title: 'Favorites',
+    title: 'Camara',
     url: '/folder/Favorites',
     iosIcon: heartOutline,
-    mdIcon: heartSharp,
-  },
-  {
-    title: 'Archived',
-    url: '/folder/Archived',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp,
-  },
-  {
-    title: 'Trash',
-    url: '/folder/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp,
-  },
-  {
-    title: 'Spam',
-    url: 'www.google.com',
-    iosIcon: warningOutline,
-    mdIcon: warningSharp,
-  },
+    mdIcon: camera,
+  }
 ];
-const labels = ['Prueba1', 'Prueba 2', 'Notes', 'Work', 'Travel', 'Reminders'];
+const labels = [ 'Elias', 'El Cochazo', 'Imanol'];
 
 const path = window.location.pathname.split('folder/')[1];
 if (path !== undefined) {
