@@ -8,13 +8,13 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Login',
-    component: Home
+    component: About
   },
  
   {
-    path: '/menu',
+    path: '/',
     name: 'Menu',
-    component: About
+    component: Home
   }
   
 ]
