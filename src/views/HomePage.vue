@@ -1,7 +1,7 @@
 
 <template>
 	  <router-view />
-	<ion-page style="--ion-background-color: #3FF0ED;">
+	<ion-page style="--ion-background-color: #834f23;">
 		
 		<ion-header :translucent="true">
 			<ion-toolbar>
@@ -63,14 +63,14 @@
 	justify-content: center;
 	align-items: center;
 	height: 50vh;
-	background-color: #3FF0ED;
+	background-color: #834f23;
 }
 .Nombre {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 10vh;
-	background: #fff;
+	background: 834f23;
     -webkit-text-fill-color: white;
 	
 	
